@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - ImageVerto</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen flex flex-col"
+  >
+    <!-- Header -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+      <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex items-center space-x-3">
+            <img
+              src="images/Logo.png"
+              alt="Logo"
+              class="h-14 w-14 object-contain"
+            />
+
+            <div>
+              <h1
+                class="text-3xl sm:text-3xl text-gray-900"
+                style="font-family: 'Pacifico', cursive"
+              >
+                ImageVerto
+              </h1>
+              <p
+                class="text-sm text-gray-600 hidden sm:block"
+                style="font-family: 'Dancing Script', cursive"
+              >
+                Turn Images Into Possibilities
+              </p>
+            </div>
+          </div>
+
+          <nav class="hidden md:flex items-center space-x-8">
+            <a
+              href="index.html"
+              class="text-gray-600 hover:text-blue-600 font-medium transition-colors"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="text-gray-600 hover:text-blue-600 font-medium transition-colors"
+              >About</a
+            >
+          </nav>
+
+          <button
+            id="mobileMenuBtn"
+            class="md:hidden p-3 rounded-xl hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
+            style="min-width: 44px; min-height: 44px"
+            aria-label="Open mobile menu"
+          >
+            <svg
+              id="menuIcon"
+              class="h-8 w-8 text-gray-600"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+            <svg
+              id="closeIcon"
+              class="h-8 w-8 text-gray-600 hidden"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div id="mobileMenu" class="md:hidden hidden border-t border-gray-200">
+          <div class="py-4 space-y-2">
+            <a
+              href="index.html"
+              class="block px-4 py-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg font-medium transition-colors"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="block px-4 py-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg font-medium transition-colors"
+              >About</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12 flex-1">
+      <section class="bg-white rounded-2xl shadow-lg p-8 max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">About ImageVerto</h2>
+        <p class="text-gray-700 mb-6 text-lg">
+          <strong>ImageVerto</strong> is a modern web-based tool that allows
+          users to convert images quickly and easily into a variety of formats.
+          Whether you’re preparing graphics for the web or organizing assets for
+          apps, ImageVerto gives you full control with minimal effort.
+        </p>
+
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">
+          🔍 How It Works
+        </h3>
+        <ol class="list-decimal list-inside space-y-3 text-gray-700 mb-6">
+          <li>
+            <strong>User Uploads an Image:</strong> Drag & drop or browse image
+            files. Preview with thumbnail and details is shown.
+          </li>
+          <li>
+            <strong>Select Output Format:</strong> Choose from formats like
+            JPEG, PNG, GIF, WebP, TIFF, SVG, and more.
+          </li>
+          <li>
+            <strong>Adjust Quality:</strong> For quality-based formats, a slider
+            lets users fine-tune output quality (10%–100%).
+          </li>
+          <li>
+            <strong>Convert:</strong> Click "Convert Image" to start conversion.
+            A progress bar and loading spinner appear.
+          </li>
+          <li>
+            <strong>Download:</strong> Once complete, a download link is
+            provided to save the new image.
+          </li>
+          <li>
+            <strong>Error Handling:</strong> Any issues are clearly displayed
+            through friendly error messages.
+          </li>
+        </ol>
+
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">
+          🛠️ Tech Behind the Scenes
+        </h3>
+        <p class="text-gray-700">
+          The tool is powered by JavaScript, using modern web APIs like
+          <code>FileReader</code>, <code>canvas</code>, and optionally libraries
+          like <strong>pica</strong> or
+          <strong>browser-image-compression</strong>. Files are processed
+          client-side and made downloadable using
+          <code>URL.createObjectURL</code>.
+        </p>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="bg-white shadow-inner py-4 px-4 text-center md:text-left text-gray-500 text-sm"
+    >
+      <div
+        class="container mx-auto flex flex-col md:flex-row justify-between items-center"
+      >
+        <div>© 2025 ImageVerto. All rights reserved.</div>
+        <div class="mt-2 md:mt-0 text-center md:text-right">
+          Developed by
+          <a
+            href="https://github.com/beggarsmind"
+            class="text-blue-600 hover:text-indigo-500 font-semibold transition-colors duration-200"
+            target="_blank"
+            rel="noopener"
+          >
+            Ranjithkumar R.
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu functionality
+      function initializeMobileMenu() {
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = document.getElementById('menuIcon');
+        const closeIcon = document.getElementById('closeIcon');
+
+        mobileMenuBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const isHidden = mobileMenu.classList.contains('hidden');
+          if (isHidden) {
+            mobileMenu.classList.remove('hidden');
+            menuIcon.classList.add('hidden');
+            closeIcon.classList.remove('hidden');
+          } else {
+            mobileMenu.classList.add('hidden');
+            menuIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+          }
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+          if (
+            !mobileMenuBtn.contains(e.target) &&
+            !mobileMenu.contains(e.target)
+          ) {
+            mobileMenu.classList.add('hidden');
+            menuIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+          }
+        });
+
+        // Close mobile menu when window is resized to desktop
+        window.addEventListener('resize', () => {
+          if (window.innerWidth >= 768) {
+            mobileMenu.classList.add('hidden');
+            menuIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+          }
+        });
+      }
+      document.addEventListener('DOMContentLoaded', initializeMobileMenu);
+    </script>
+  </body>
+</html>
